@@ -6,7 +6,6 @@ Defensive Technology
    :maxdepth: 2
    
 
-====================
 Defensive Technology
 ====================
 If you are looking for basic technical information on how to protect the
