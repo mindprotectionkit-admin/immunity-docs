@@ -22,7 +22,7 @@ this is where you can read articles that will explain:
 -  how to protect your privacy by using defensive technologies such as
    `Secure Deletion`_ software, `File and Disk Encryption`_ software,
    and `virtual private networks`_
--  the overarching security threat posed by `malware`_, how to evaluate
+-  the overarching security threat posed by `malware_SSD`_, how to evaluate
    that threat, and how to reduce it
 
 Just remember: technology changes quickly. We’ll be doing our best to
@@ -35,7 +35,7 @@ sources before making any serious security decisions.
 .. _Secure Deletion: https://ssd.eff.org/tech/deletion
 .. _File and Disk Encryption: https://ssd.eff.org/tech/disk-encryption
 .. _virtual private networks: https://ssd.eff.org/tech/vpn
-.. _malware: https://ssd.eff.org/tech/malware
+.. _malware_SSD: https://ssd.eff.org/tech/malware
    
 
 Email
@@ -58,7 +58,7 @@ Data on the Wire
 Email usually travels through a number of separate hops between the
 sender and receiver. This diagram illustrates the typical steps messages
 might travel through, the transmission protocols used for those steps,
-and the available types of encryption for those steps. |image0|
+and the available types of encryption for those steps. |image_email_small|
 
 End-to-End Encryption of Specific Emails
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -83,15 +83,15 @@ use GPG/PGP, though it can be deployed amongst your friends or within an
 organization.
 
 
-.. |image0| image:: https://ssd.eff.org/files/email_small.jpg
-   :target: https://ssd.eff.org/files/email.png
+.. |image_email_small| image:: /img/email_small.jpg
+   :target: /img/email.png
 
 The second catch is that you need to find and verify public keys for the
 people you are sending email to, to ensure that eavesdroppers cannot
 trick you into using the wrong key. This trickery is known as a “man in
 the middle” attack. Probably the easiest way to start using GnuPG is to
 use `Mozilla Thunderbird`_ with the `Enigmail`_ plugin. You can find the
-quick start guide for installing and configuring Enigmail `here`_.
+quick start guide for installing and configuring Enigmail `Enigmal_Quickstart`_.
 
 Server-to-Server Encrypted Transit
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -111,7 +111,7 @@ TLS.
 Client-to-Mail Server Encryption
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
- If you use POP or IMAP to fetch your email, make sure it is encrypted
+If you use POP or IMAP to fetch your email, make sure it is encrypted
 POP or IMAP. If your mail server doesn’t support the encrypted version
 of that protocol, get your service provider or systems administrator to
 fix that. If you use a webmail service, ensure that you only access it
@@ -121,7 +121,7 @@ facilities (though they are `not immune to warrants`_).
 
 .. _Mozilla Thunderbird: http://www.mozilla.com/thunderbird
 .. _Enigmail: http://www.enigmail.net/home/index.php
-.. _here: http://www.enigmail.net/documentation/quickstart.php
+.. _Enigmal_Quickstart: http://www.enigmail.net/documentation/quickstart.php
 .. _not immune to warrants: http://blog.wired.com/27bstroke6/2007/11/encrypted-e-mai.html
 
 
@@ -129,7 +129,7 @@ Many webmail service providers only use HTTPS for the login page, and
 then revert to HTTP. This isn’t secure. Look for an account
 configuration option (or a `browser plugin`_) to ensure that your
 webmail account always uses HTTPS. In Gmail, for instance, you can find
-this option in the “general” tab of the settings page: |image0| If you
+this option in the “general” tab of the settings page: |image_gmail| If you
 can’t find a way to ensure that you only see your webmail through https,
 switch to a different web mail provider.
 
@@ -161,7 +161,7 @@ after the user deleted them.
 
 .. _browser plugin: http://www.customizegoogle.com/
 
-.. |image0| image:: https://ssd.eff.org/files/gmail_https.jpeg
+.. |image_gmail| image:: /img/gmail_https.jpeg
 
 
 The content of PGP/GnuPG encrypted emails will not be accessible through
@@ -358,7 +358,7 @@ disk password.
 If you computer contains a larger (or harder to quantify)
 set of sensitive documents, or any documents which might be considered
 *highly* sensitive, it is best to use full disk encryption. In such
-cases the threat posed by `Malware`_ should also be taken into account.
+cases the threat posed by `Malware_Tech`_ should also be taken into account.
 
 Disk Encryption Is Of Little Use in Civil Lawsuits
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -468,7 +468,7 @@ truthfully.
 .. _resistant to all forms of automated guessing: https://ssd.eff.org/your-computer/protect/passwords
 .. _BIOS: http://computer.howstuffworks.com/bios.htm
 .. _about $100 per drive: http://www.pwcrack.com/harddisk.shtml
-.. _Malware: https://ssd.eff.org/tech/malware
+.. _Malware_Tech: https://ssd.eff.org/tech/malware
 .. _Even deleted files may be recoverable: https://ssd.eff.org/tech/deletion
 .. _tricks: http://citp.princeton.edu/memory/
 
@@ -776,7 +776,7 @@ CIPAV: An Example of Malware Use for Law Enforcement
 A **CIPAV** is an FBI acronym which stands for **Computer and Internet
 Protocol Address Verifier**. CIPAVs are a type of malware intended to
 identify people who are hiding their identity using `proxy servers`_,
-bot nets, compromised computers or anonymity networks like `Tor`_. A
+bot nets, compromised computers or anonymity networks like `Tor_Web`_. A
 small amount is known about them as a result of `published documents`_
 from cases in which they were used. CIPAVs *may*\ include use of browser
 exploits to run software on a computer regardless of how many steps of
@@ -795,7 +795,7 @@ is advisable to find computer security experts to defend their computers
 most sensitive activities.
 
 .. _proxy servers: http://en.wikipedia.org/wiki/Proxy_server
-.. _Tor: http://www.torproject.org/
+.. _Tor_Web: http://www.torproject.org/
 .. _published documents: http://blog.wired.com/27bstroke6/2007/07/fbi-spyware-how.html
 .. _black market: http://www.cs.auckland.ac.nz/~pgut001/pubs/malware_biz.pdf
 .. _estimates: http://www.cs.auckland.ac.nz/~pgut001/pubs/malware_biz.pdf
@@ -1025,7 +1025,7 @@ A Better Option: Install Eraser
 is much more sophisticated than the built in cipher.exe. It can be used
 to quickly and easily target individual files for secure deletion, or to
 implement periodic secure deletion policies. You can get a copy of
-Eraser `here`_ and some tips on how to use it
+Eraser `Heidi_Download`_ and some tips on how to use it
 `here <http://eraser.heidi.ie/>`__.
 
 Secure Deletion on Mac OS X
@@ -1154,7 +1154,7 @@ Never just toss a CD-ROM out in the garbage unless you’re absolutely
 sure there’s nothing sensitive on it.
 
 .. _Darik’s Boot and Nuke: http://dban.sourceforge.net/
-.. _here: http://eraser.heidi.ie/download.php
+.. _Heidi_Download: http://eraser.heidi.ie/download.php
 .. _advice: http://docs.info.apple.com/article.html?path=Mac/10.4/en/mh475.html
 
 
@@ -1198,9 +1198,9 @@ In general, the features are getting better, so it’s getting easier to
 control browser records. 
 
 For example, here are the stored data privacy
-settings pages for Firefox, the free web browser: |image0|
+settings pages for Firefox, the free web browser: |image_firefox|
 
-.. |image0| image:: https://ssd.eff.org/files/firefox_privacy.jpeg
+.. |image_firefox| image:: /img/firefox_privacy.jpeg
 
 For each type of information your browser stores, you can either set it
 to not collect it at all, set it to delete within a certain span of
@@ -1210,7 +1210,7 @@ data your browser’s been keeping on you.
 
 Apple’s Safari browser also has
 an easy one-click option to clear everything. Just select “Reset Safari”
-from the “Safari” pull-down menu and you’ll get this option: |image0|
+from the “Safari” pull-down menu and you’ll get this option: |image_safari_reset|
 
 Controlling and Limiting the Logs Kept By Web Servers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1237,7 +1237,7 @@ consider for other kinds of sites are similar.
 
 .. _white paper on search privacy: http://www.eff.org/wp/six-tips-protect-your-search-privacy
 
-.. |image0| image:: https://ssd.eff.org/files/safari_reset.jpeg
+.. |image_safari_reset| image:: /img/safari_reset.jpeg
 
 Cookies
 ^^^^^^^
@@ -1269,9 +1269,9 @@ persist until the user quits the browser (also known as only allowing
 “session cookies”). 
 
 You can enable this in the “Privacy” tab of Firefox
-3’s “Preferences” pane: |image0|
+3’s “Preferences” pane: |image_session_cookies|
 
-.. |image0| image:: https://ssd.eff.org/files/fx_session_cookies.png
+.. |image_session_cookies| image:: /img/fx_session_cookies.gif
 
 
 Unfortunately, if you only quit your browser entirely once every week or
@@ -1312,7 +1312,7 @@ Type “storage” into the filter box, and press return. You should see an
 option called **dom.storage.enabled**. Change it to “false”.
 
 **Managing Adobe Flash Privacy.** Adobe lists advice on how to disable
-Flash cookies `here`_. There are some problems with the options Adobe
+Flash cookies `Flash_Cookies`_. There are some problems with the options Adobe
 offers (for instance, there is no “session only” option), so it’s
 probably best to globally set Local Stored Object space to 0 and only
 change that for sites which you’re willing to have tracking you. On the
@@ -1337,7 +1337,7 @@ Whenever your browser fetches a page, image or script from a website,
 you should expect the website to record the IP address of the computer
 you’re using. Your ISP, or anybody with the power to subpoena your ISP,
 could tie those records to the Internet account subscription you are
-connected through. Use `Tor`_ (or a proxy server, which is faster but
+connected through. Use `Tor_SSD`_ (or a proxy server, which is faster but
 less secure) if you wish to prevent these records from being created.
 
 Privacy on the wire
@@ -1411,12 +1411,12 @@ NoScript is also much more secure.
 
 .. _malware: https://ssd.eff.org/search/node/SSD/Malware
 .. _NoScript: http://noscript.net/
-.. _here: http://kb.adobe.com/selfservice/viewContent.do?externalId=52697ee8&sliceId=1
+.. _Flash_Cookies: http://kb.adobe.com/selfservice/viewContent.do?externalId=52697ee8&sliceId=1
 .. _Gnash project: http://www.gnashdev.org/
 .. _privacy and security risks: http://www.securityfocus.com/news/11511
 .. _youtube-dl: http://rg3.github.com/youtube-dl/
 .. _FlashBlocker: https://addons.mozilla.org/en-US/firefox/addon/433
-.. _Tor: https://ssd.eff.org/search/node/SSD/Tor
+.. _Tor_SSD: https://ssd.eff.org/search/node/SSD/Tor
 
 Wi-Fi
 =====
@@ -1466,7 +1466,7 @@ When Using Open Wi-Fi
 If you’re using someone else’s “open” — unencrypted — wireless access
 point, like the one at the coffee shop, you will have to take care of
 your own encryption using the tools and methods described in other
-sections. `Tor`_ is especially useful for protecting your wireless
+sections. `Tor_Local`_ is especially useful for protecting your wireless
 transmissions. If you don’t use Tor, and even if you do, you should also
 always use application-level encryption over open wireless, so no one
 can sniff your `passwords`_. 
@@ -1482,6 +1482,6 @@ eavesdropper could see your unencrypted password traveling to the
 newspaper site, and guess that you were using the same password for your
 bank account.
 
-.. _Tor: https://ssd.eff.org/tech/tor
+.. _Tor_Local: https://ssd.eff.org/tech/tor
 .. _passwords: https://ssd.eff.org/your-computer/protect/passwords
    

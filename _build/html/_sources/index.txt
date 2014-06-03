@@ -1,6 +1,7 @@
 The Immunity DOCS!
 ==================
 
+
 Surveillance Self-Defense (SSD) exists to answer two main questions:
 What can the government legally do to spy on your computer data and
 communications? And what can you legally do to protect yourself against
@@ -61,7 +62,11 @@ with a lawyer licensed to practice in your jurisdiction.
 .. _emails: https://ssd.eff.org/tech/email
 .. _instant messages: https://ssd.eff.org/tech/im
 
-Contents:
+
+
+
+Contents
+--------
 
 .. toctree::
    :maxdepth: 2
@@ -73,12 +78,3 @@ Contents:
    privacy-protection
    understanding-risk
 
-
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
