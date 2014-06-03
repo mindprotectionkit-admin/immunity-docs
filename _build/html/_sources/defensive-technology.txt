@@ -1271,7 +1271,7 @@ persist until the user quits the browser (also known as only allowing
 You can enable this in the “Privacy” tab of Firefox
 3’s “Preferences” pane: |image_session_cookies|
 
-.. |image_session_cookies| image:: /img/fx_session_cookies.gif
+.. |image_session_cookies| image:: /img/fx_session_cookies.png
 
 
 Unfortunately, if you only quit your browser entirely once every week or
